@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast - Premium Weather Experience</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="background-container" id="background-container">
+        <!-- Dynamic Background images/colors will go here -->
+    </div>
+
+    <main class="app-container">
+        <header class="app-header">
+            <h1 class="logo">SkyCast</h1>
+            <div class="search-container">
+                <input type="text" id="city-input" placeholder="Search for a city..." autocomplete="off">
+                <button id="search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                </button>
+            </div>
+        </header>
+
+        <section class="weather-content" id="weather-content" style="display: none;">
+            <div class="current-weather glass">
+                <div class="location-details">
+                    <h2 id="city-name">Heilsinki</h2>
+                    <p id="country-name">Finland</p>
+                    <p id="current-date">Wed, March 18</p>
+                </div>
+                
+                <div class="temp-display">
+                    <img id="weather-icon" src="" alt="Weather Condition">
+                    <div class="temp-info">
+                        <span id="temperature">--</span><span class="unit">°C</span>
+                        <p id="weather-desc">Cloudy</p>
+                    </div>
+                </div>
+
+                <div class="weather-stats">
+                    <div class="stat">
+                        <i data-lucide="droplets" class="stat-icon"></i>
+                        <span class="stat-label">Humidity</span>
+                        <span class="stat-value" id="humidity">--%</span>
+                    </div>
+                    <div class="stat">
+                        <i data-lucide="wind" class="stat-icon"></i>
+                        <span class="stat-label">Wind Speed</span>
+                        <span class="stat-value" id="wind-speed">-- km/h</span>
+                    </div>
+                    <div class="stat">
+                        <i data-lucide="eye" class="stat-icon"></i>
+                        <span class="stat-label">Visibility</span>
+                        <span class="stat-value" id="visibility">-- km</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forecast-section">
+                <h3>7-Day Forecast</h3>
+                <div class="forecast-grid" id="forecast-grid">
+                    <!-- Forecast items will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <div id="loader" class="loader-container" style="display: none;">
+            <div class="spinner"></div>
+            <p>Fetching sky data...</p>
+        </div>
+
+        <div id="error-message" class="error-container glass" style="display: none;">
+            <p>City not found. Please try again.</p>
+        </div>
+        
+        <div id="welcome-message" class="welcome-container glass">
+            <h2>Track the sky globally.</h2>
+            <p>Enter a city name above to get started with a premium weather experience.</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
