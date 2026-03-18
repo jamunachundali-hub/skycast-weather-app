@@ -23,13 +23,13 @@ SkyCast is a modern, responsive weather application that provides real-time weat
 ## 🚀 Deployment
 
 The app is deployed using GitHub Pages. You can view it live here:
-[https://jamuna-hub.github.io/skycast-weather-app/](https://jamuna-hub.github.io/skycast-weather-app/)
+[https://jamunachundali-hub.github.io/skycast-weather-app/](https://jamunachundali-hub.github.io/skycast-weather-app/)
 
 ## 📖 How to Run Locally
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/jamuna-hub/skycast-weather-app.git
+   git clone https://github.com/jamunachundali-hub/skycast-weather-app.git
    ```
 2. Open `index.html` in your favorite browser.
 3. Enjoy the premium weather experience!
